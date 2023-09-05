@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"outDir": "./dist",
+		"alwaysStrict": true,
+		"target": "ES2021",
+		"moduleResolution": "Node",
+		"module": "CommonJS"
+	},
+	"exclude": ["**/*.test.ts"]
+}

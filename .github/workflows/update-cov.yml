@@ -1,0 +1,44 @@
+name: Update Master - Coverage and Dependencies
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    cov:
+        name: New Coverage Minimum, Badges, Leader Board Check, and Root Dependencies
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+
+            - name: Use Node.js 18.x
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 18.x
+                  cache-dependency-path: |
+                      ./yarn.lock
+                      ./server/yarn.lock
+                  registry-url: 'https://npm.pkg.github.com/'
+                  scope: '@mappedin'
+
+            - name: Install dependencies
+              run: yarn --frozen-lockfile
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_READ }}
+
+            - name: Determine and upload root dependencies
+              uses: MappedIn/root-dependency-action@v1
+              with:
+                  azure_blob_storage_connection_string: ${{ secrets.AZURE_ROOT_DEPENDENCY_STORAGE_STRING }}
+
+            - name: Run tests
+              run: yarn test:ci:full
+                         
+            - name: Update code coverage
+              uses: mappedin/coverage-ratchet-action@v1
+              with:
+                azure_blob_storage_connection_string: ${{ secrets.AZURE_COV_STORAGE_STRING }}
+                mode: 'UPDATE'
