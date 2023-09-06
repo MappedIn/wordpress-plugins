@@ -30,6 +30,7 @@
 * Requires at least: 2.9.0
 * Requires PHP:      7.2
 * Author:            Mappedin
+* License: MIT
 */
 
 //Constants
