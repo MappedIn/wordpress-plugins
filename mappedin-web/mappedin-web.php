@@ -213,7 +213,7 @@ function mappedin_display_web_config_page() {
 
   function mappedin_web_admin_form_response() {
     if( isset( $_POST['mappedin_web_admin_save_nonce'] ) && 
-    wp_verify_nonce( $_POST['mappedin_web_admin_save_nonce'], 'mappedin_web_admin_save_nonce')) {
+        wp_verify_nonce( sanitize_text_field ( wp_unslash( $_POST['mappedin_web_admin_save_nonce'])), 'mappedin_web_admin_save_nonce')) {
         $mappedin_web_client_id = sanitize_text_field( $_POST['mappedin_web_clientId'] );
         $mappedin_web_client_secret = sanitize_text_field( $_POST['mappedin_web_client_secret'] );
         $mappedin_web_venue_slug = sanitize_text_field( $_POST['mappedin_web_venue_slug'] );
