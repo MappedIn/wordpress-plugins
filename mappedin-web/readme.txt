@@ -3,15 +3,15 @@
 Contributors: mappedin
 Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 2.9.0
-Tested up to: 6.4.1
+Tested up to: 6.4.2
 Requires PHP: 7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: MIT
 License URI: https://opensource.org/license/mit/
 
 The Mappedin plugin for WordPress allows users to easily add interactive indoor maps to WordPress pages using a simple shortcode - no coding required!
 
-Note: A subscription to Mappedin Web is required. This plugin does not add maps to your WordPress pages without one. Visit [www.mappedin.com](www.mappedin.com) for more information.
+Note: An account and subscription to Mappedin Web is required. This plugin does not add maps to your WordPress pages without one. Visit [www.mappedin.com](www.mappedin.com) for more information.
 
 This plugin requires access to Mappedin's cloud services to download map data and to download Mappedin Web, which renders the map. The Mappedin Web renderer is not included in this plugin because its versioning is independently controlled by Mappedin cloud infrastructure.
 
