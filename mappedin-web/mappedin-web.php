@@ -23,14 +23,16 @@
 * SOFTWARE.
 *
 *
-* Plugin Name:       Mappedin-Web
-* Plugin URI:        https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
-* Description:       A Wordpress plugin to configure and display Mappedin Web.
-* Text Domain:       mappedin-web
-* Version:           1.0.1
-* Requires at least: 2.9.0
-* Requires PHP:      7.2
-* Author:            Mappedin
+* Plugin Name:          Mappedin-Web
+* Plugin URI:           https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
+* Description:          A Wordpress plugin to configure and display Mappedin Web.
+* Text Domain:          mappedin-web
+* Version:              1.0.2
+* Requires at least:    2.9.0
+* Requires PHP:         7.2
+* Author:               Mappedin
+* License:              MIT
+* License URI:          https://spdx.org/licenses/MIT.html
 */
 
 // Exit if accessed directly - security.
@@ -74,8 +76,8 @@ function mappedin_web_register_shortcodes() {
 
 // Admin page CSS
 function mappedin_admin_page_style() {
-    echo <<<ECHOEND
-        <style>
+    $mappedin_admin_page_css = 
+        '<style>
             .mappedinWebAdmin_table {
                     border-collapse: collapse;
                     color: #333333;
@@ -122,8 +124,14 @@ function mappedin_admin_page_style() {
                 cursor: pointer;
                 border-radius: 12px;
                 font-weight: bold;
-        </style>
-    ECHOEND;
+        </style>';
+
+        $allowed_html = array(
+            'style' => array()
+        );
+
+        echo wp_kses( $mappedin_admin_page_css, $allowed_html );
+
 }
 
 // Admin page
@@ -148,12 +156,12 @@ function mappedin_display_web_config_page() {
     $mappedin_web_width = esc_html ( get_option(MAPPEDIN_WEB_WIDTH, "100%" ));
     $mappedin_web_height = esc_html ( get_option(MAPPEDIN_WEB_HEIGHT, "75svh" ));
 
-    echo <<<ECHOEND
-        <div class="wrap">            
+    $mappedin_web_config_html = 
+        '<div class="wrap">            
             <h2>Mappedin Web Configuration</h2>
-            <form name="mappedinWebOptions" method="post" action="$the_admin_url">
+            <form name="mappedinWebOptions" method="post" action="' . $the_admin_url . '">
                 <input type="hidden" name="action" value="mappedin_web_form_response">
-                <input type="hidden" name="mappedin_web_admin_save_nonce" value="$mappedin_web_admin_save_nonce" />
+                <input type="hidden" name="mappedin_web_admin_save_nonce" value="' . $mappedin_web_admin_save_nonce . '" />
                 <table class="mappedinWebAdmin_table">
                     <tr>
                         <th><b>Parameter</b></hd>
@@ -161,27 +169,27 @@ function mappedin_display_web_config_page() {
                     </tr>
                     <tr>
                         <td><b>Client Id: </b></td>
-                        <td><input type="text" name="mappedin_web_clientId" id="mappedin_web_clientId" size ="55" value="$mappedin_client_id"></td>
+                        <td><input type="text" name="mappedin_web_clientId" id="mappedin_web_clientId" size ="55" value="' . $mappedin_client_id . '"></td>
                     </tr>
                     <tr>
                         <td><b>Client Secret: </b></td>
-                        <td><input type="text" name="mappedin_web_client_secret" id="mappedin_web_client_secret" size="55" value="$mappedin_client_secret"></td>
+                        <td><input type="text" name="mappedin_web_client_secret" id="mappedin_web_client_secret" size="55" value="' . $mappedin_client_secret . '"></td>
                     </tr>
                     <tr>
                         <td><b>Venue Slug: </b></td>
-                        <td><input type="text" name="mappedin_web_venue_slug" id ="mappedin_web_venue_slug" size="55" value="$mappedin_venue_slug"></td>
+                        <td><input type="text" name="mappedin_web_venue_slug" id ="mappedin_web_venue_slug" size="55" value="' . $mappedin_venue_slug . '"></td>
                     </tr>
                     <tr>
                         <td><b>Initial Language: </b></td>
-                        <td><input type="text" name="mappedin_web_initial_lang" id="mappedin_web_initial_lang" size="2" value="$mappedin_map_language"></td>
+                        <td><input type="text" name="mappedin_web_initial_lang" id="mappedin_web_initial_lang" size="2" value="' . $mappedin_map_language . '"></td>
                     </tr>
                     <tr>
                         <td><b>Map Width (CSS Units): </b></td>
-                        <td><input type="text" name="mappedin_web_width" id="mappedin_web_width" size="10" value="$mappedin_web_width"></td>
+                        <td><input type="text" name="mappedin_web_width" id="mappedin_web_width" size="10" value="' . $mappedin_web_width . '"></td>
                     </tr>
                     <tr>
                         <td><b>Map Height (CSS Units): </b></td>
-                        <td><input type="text" name="mappedin_web_height" id="mappedin_web_height" size="10" value="$mappedin_web_height"></td>
+                        <td><input type="text" name="mappedin_web_height" id="mappedin_web_height" size="10" value="' . $mappedin_web_height . '"></td>
                     </tr>                                        
                     <tr>
                         <td></td><td align="right"><input type="Submit" value="Save" id="submit" class="mappedinWebAdmin_submit {
@@ -190,10 +198,42 @@ function mappedin_display_web_config_page() {
                 </table>
             </form>
             <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
-            <p><b>$mappedin_web_save_status</b></p>
-        </div>
-        ECHOEND;
+            <p><b>' . $mappedin_web_save_status . ' </b></p>
+        </div>';
 
+        $allowed_html = array(
+            'div' => array(
+                'class' => array()
+            ),
+            'h2' => array(),
+            'form' => array(
+                'name' => array(),
+                'method' => array(),
+                'action' => array()
+            ),
+            'input' => array(
+                'type' => array(),
+                'name' => array(),
+                'id' => array(),
+                'size' => array(),
+                'value' => array()
+            ),
+            'table' => array(
+                'class' => array()
+            ),
+            'tr' => array(),
+            'th' => array(),
+            'td' => array(),
+            'b' => array(),
+            'a' => array(
+                'href' => array(),
+                'target' => array()
+            ),
+            'p' => array(),
+        );
+
+        echo wp_kses( $mappedin_web_config_html, $allowed_html );
+        
   }
 
   function mappedin_web_admin_menu() {
