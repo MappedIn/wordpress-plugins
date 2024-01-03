@@ -27,7 +27,7 @@
 * Plugin URI:           https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
 * Description:          A Wordpress plugin to configure and display Mappedin Web.
 * Text Domain:          mappedin-web
-* Version:              1.0.2
+* Version:              1.0.3
 * Requires at least:    2.9.0
 * Requires PHP:         7.2
 * Author:               Mappedin
@@ -299,7 +299,7 @@ function mappedin_display_web_config_page() {
 
 // Headers required by Mappedin Web
 function mappedin_add_web_headers() {
-    print '<link href="https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.css" rel="stylesheet" />';
+    wp_enqueue_style("mappedin-web-style", "https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.css");
 }
 
 
@@ -338,4 +338,4 @@ function mappedin_web_display_shortcode_content() {
     return($ret_val);
 }
 
-add_action('wp_head', 'mappedin_add_web_headers');
+add_action('wp_enqueue_scripts', 'mappedin_add_web_headers');
