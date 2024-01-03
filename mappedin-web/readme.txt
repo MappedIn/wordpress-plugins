@@ -5,15 +5,11 @@ Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 2.9.0
 Tested up to: 6.4.2
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: MIT
 License URI: https://opensource.org/license/mit/
 
 The Mappedin plugin for WordPress allows users to easily add interactive indoor maps to WordPress pages using a simple shortcode - no coding required!
-
-Note: An account and subscription to Mappedin Web is required. This plugin does not add maps to your WordPress pages without one. Visit [www.mappedin.com](www.mappedin.com) for more information.
-
-This plugin requires access to Mappedin's cloud services to download map data and to download Mappedin Web, which renders the map. The Mappedin Web renderer is not included in this plugin because its versioning is independently controlled by Mappedin cloud infrastructure.
 
 ## Description
 
@@ -60,13 +56,25 @@ For more information about this plugin, visit the [Mappedin Web Plugin for WordP
 ## Frequently Asked Questions
 
 Is Mappedin free?
-The Mappedin plugin for WordPress is free and open source. Mappedin Web requires an annual subscription. Visit [www.mappedin.com](www.mappedin.com) for more information.
+The Mappedin plugin for WordPress is free and open source. Mappedin Web requires an annual subscription and is not free. Visit [www.mappedin.com](www.mappedin.com) for more information.
+
+Do I require a subscription to use this plugin?
+Yes, this plugin requires a map to created using [Mappedin CMS](https://www.mappedin.com/map-cms/) and a subscription to [Mappedin Web](https://developer.mappedin.com/pre-built-applications/responsive-web-app-guide). This plugin does not add maps to your WordPress pages without one.
 
 I don’t see my map! What do I do?
 Make sure you’ve configured the plugin correctly. Go to WordPress Admin Dashboard > Mappedin and add your Client ID, Client Secret, and Venue Slug.
 
 Where can I get additional support?
 Learn more about Mappedin products at [www.mappedin.com](www.mappedin.com). Contact Mappedin support with questions about configuring this plugin.
+
+What resources are loaded by this plugin?
+The plugin downloads a JavaScript and CSS file required by Mappedin Web. These are hosted by Mappedin and updated independently from this plugin.
+Mappedin Web JS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.js 
+Mappedin Web CSS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.css
+
+Where can I get more information about Mappedin's privacy policy and data collection?
+Refer to the [Mappedin Privacy Policy](https://info.mappedin.com/privacy-policy).
+
 
 ## Screenshots
 
@@ -75,3 +83,5 @@ Learn more about Mappedin products at [www.mappedin.com](www.mappedin.com). Cont
 ### Changelog
 
 1.0.0 - Initial release.
+1.0.3 - Updates for WordPress Marketplace Submission
+

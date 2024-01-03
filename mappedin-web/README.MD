@@ -17,7 +17,7 @@ For more information about Mappedin, visit [www.mappedin.com](www.mappedin.com).
 Tested up to: 6.4.2
 Requires at least: 2.9.0
 PHP Version: 7.2+
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 License: MIT
 License URI: https://opensource.org/license/mit/
