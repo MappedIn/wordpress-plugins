@@ -24,7 +24,7 @@ License URI: https://opensource.org/license/mit/
 
 ## Installation
 
-The Mappedin Web Plugin for WordPress can be obtained from the WordPress Plugin Store (coming soon) or downloaded directly from Github.
+The Mappedin Web Plugin for WordPress can be obtained from the [WordPress Plugin Store](https://wordpress.org/plugins/mappedin-web/) or downloaded directly from Github.
 
 Please refer to the [WordPress plugin installation](https://wordpress.org/documentation/article/manage-plugins/#installing-plugins-1) documentation and follow the steps for your preferred method of installation.
 
