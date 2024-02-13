@@ -25,9 +25,9 @@
 *
 * Plugin Name:          Mappedin-Viewer
 * Plugin URI:           https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
-* Description:          A Wordpress plugin to configure and display Mappedin Web.
+* Description:          A Wordpress plugin to configure and display Mappedin Viewer.
 * Text Domain:          mappedin-viewer
-* Version:              1.0.3
+* Version:              1.0.0
 * Requires at least:    2.9.0
 * Requires PHP:         7.2
 * Author:               Mappedin
@@ -35,11 +35,13 @@
 * License URI:          https://spdx.org/licenses/MIT.html
 */
 
+// TODO - update the above plugin URI
+
 // Exit if accessed directly - security.
 if ( ! defined( 'ABSPATH' ) ) exit; 
 
 //Constants
-define('MAPPEDIN_VIEWER_VENUE_ID', 'mappedin_viewer_venue_id_option');
+define('MAPPEDIN_VIEWER_URL', 'mappedin_viewer_url_option');
 
 // Activation and deactivation.
 register_activation_hook( __FILE__, 'mappedin_viewer_activation' );
@@ -53,7 +55,7 @@ function mappedin_viewer_activation() {
 // Runs once when deactivated.
 function mappedin_viewer_deactivation() {
     // Delete the options.
-    $del_id = delete_option(MAPPEDIN_VIEWER_VENUE_ID);
+    $del_id = delete_option(MAPPEDIN_VIEWER_URL);
 }
 
 // Initialization
@@ -139,8 +141,9 @@ function mappedin_display_viewer_config_page() {
     }
 
     $the_admin_url = esc_url( admin_url( 'admin-post.php' ));
-    $mappedin_venue_id =  esc_html( get_option(MAPPEDIN_VIEWER_VENUE_ID, "" ));
+    $mappedin_url =  esc_html( get_option(MAPPEDIN_VIEWER_URL, "" ));
 
+    // TODO - replace link to the reference documentation at the bottom of this form
     $mappedin_viewer_config_html = 
         '<div class="wrap">            
             <h2>Mappedin Viewer Configuration</h2>
@@ -153,8 +156,8 @@ function mappedin_display_viewer_config_page() {
                         <th><b>Value</b></hd>
                     </tr>
                     <tr>
-                        <td><b>Venue Id: </b></td>
-                        <td><input type="text" name="mappedin_viewer_venueId" id="mappedin_viewer_venueId" size ="55" value="' . $mappedin_venue_id . '"></td>
+                        <td><b>Map URL: </b></td>
+                        <td><input type="text" name="mappedin_viewer_url" id="mappedin_viewer_url" size ="55" value="' . $mappedin_url . '"></td>
                     </tr>
                     <tr>
                         <td></td><td align="right"><input type="Submit" value="Save" id="submit" class="mappedinViewerAdmin_submit {
@@ -162,7 +165,7 @@ function mappedin_display_viewer_config_page() {
                     </tr>
                 </table>
             </form>
-            TODO - link the reference documentation
+            <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
             <p><b>' . $mappedin_viewer_save_status . ' </b></p>
         </div>';
 
@@ -219,9 +222,9 @@ function mappedin_display_viewer_config_page() {
   function mappedin_viewer_admin_form_response() {
     if( isset( $_POST['mappedin_viewer_admin_save_nonce'] ) && 
         wp_verify_nonce( sanitize_text_field ( wp_unslash( $_POST['mappedin_viewer_admin_save_nonce'])), 'mappedin_viewer_admin_save_nonce')) {
-        $mappedin_viewer_venue_id = sanitize_text_field( $_POST['mappedin_viewer_venueId'] );
+        $mappedin_viewer_url = sanitize_text_field( $_POST['mappedin_viewer_url'] );
 
-        update_option(MAPPEDIN_VIEWER_VENUE_ID, $mappedin_viewer_venue_id );
+        update_option(MAPPEDIN_VIEWER_URL, $mappedin_viewer_url );
 
         $save_status = "1"; // Success!
 
@@ -253,26 +256,30 @@ function mappedin_display_viewer_config_page() {
   add_action('admin_head', 'mappedin_admin_page_style');
 
 function mappedin_viewer_display_shortcode_content() {
-    $mappedin_viewer_venue_id = esc_html ( get_option(MAPPEDIN_VIEWER_VENUE_ID, "" ));
+    $mappedin_viewer_url = esc_html ( get_option(MAPPEDIN_VIEWER_URL, "" ));
 
-   // TODO - define error text for missing configuration
+   // TODO - swap out documentation
     $ret_val = 
-        '';
+        '<p>Configure the Mappedin map URL in the Wordpress Mappedin Web admin page.</p>
+        <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
+        ';
 
-    if (strlen($mappedin_viewer_venue_id) > 0) {     
+    if (strlen($mappedin_viewer_url) > 0) {     
         // Parameters have been configured, display Mappedin Viewer.  
         $ret_val =  
-            '<iframe
-                href="https://www.mappedin.com/"
-                title="Mappedin Map"
-                name="Mappedin Map"
-                scrolling="no"
-                width="100%"
-                height="650"
-                frameborder="0"
-                style="border:0"
-                src="https://app.mappedin.com/map/' . $mappedin_viewer_venue_id . '?embedded=true"
-            ></iframe>';
+            '<div>
+                <iframe
+                    href="https://www.mappedin.com/"
+                    title="Mappedin Map"
+                    name="Mappedin Map"
+                    scrolling="no"
+                    width="100%"
+                    height="650"
+                    frameborder="0"
+                    style="border:0"
+                    src="' . $mappedin_viewer_url . '"
+                ></iframe>
+            </div>';
     }
 
     return($ret_val);
