@@ -67,7 +67,7 @@ function mappedin_viewer_register_shortcodes() {
  }
 
 // Admin page CSS
-function mappedin_admin_page_style() {
+function mappedin_admin_viewer_page_style() {
     $mappedin_admin_page_css = 
         '<style>
             .mappedinViewerAdmin_table {
@@ -165,7 +165,7 @@ function mappedin_display_viewer_config_page() {
                     </tr>
                 </table>
             </form>
-            <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
+            <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Viewer Plugin for WordPress Guide</a> for more information on these parameters.</p>
             <p><b>' . $mappedin_viewer_save_status . ' </b></p>
         </div>';
 
@@ -252,8 +252,8 @@ function mappedin_display_viewer_config_page() {
 }
 
   add_action('admin_menu', 'mappedin_viewer_admin_menu');
-  add_action( 'admin_post_mappedin_viewer_form_response', 'mappedin_viewer_admin_form_response');
-  add_action('admin_head', 'mappedin_admin_page_style');
+  add_action('admin_post_mappedin_viewer_form_response', 'mappedin_viewer_admin_form_response');
+  add_action('admin_head', 'mappedin_admin_viewer_page_style');
 
 function mappedin_viewer_display_shortcode_content() {
     $mappedin_viewer_url = esc_html ( get_option(MAPPEDIN_VIEWER_URL, "" ));

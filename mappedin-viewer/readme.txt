@@ -1,74 +1,78 @@
-# Mappedin Web Plugin for WordPress
+# Mappedin Viewer Plugin for WordPress
 
 Contributors: mappedin
 Tags: map, maps, interactive map, web map, mappedin
-Requires at least: 2.9.0
+Requires at least: 3.6.0
 Tested up to: 6.4.2
 Requires PHP: 7.2
-Stable tag: 1.0.3
+Stable tag: 1.0.0
 License: MIT
 License URI: https://opensource.org/license/mit/
 
-The Mappedin plugin for WordPress allows users to easily add interactive indoor maps to WordPress pages using a simple shortcode - no coding required!
+The Mappedin Viewer plugin for WordPress allows users to easily add interactive indoor maps to WordPress pages using a simple shortcode - no coding required!
 
 ## Description
 
-The Mappedin Web Plugin for WordPress allows easily adding Mappedin Web to any WordPress page or post.
+The Mappedin Viewer Plugin for WordPress allows easily adding a Mappedin Viewer to any WordPress page or post.
 
-Mappedin Web is a fully packaged solution that can be easily embedded into your website. Once it's configured, you will have ongoing access to the Mappedin Web platform as it continuously evolves and improves with new features and data driven learnings. Customers using Mappedin Web will always have the best version of our product, with out of the box features including:
+Mappedin Viewer is a fully packaged solution that can be easily embedded into your website. Once it's configured, you will have ongoing access to the Mappedin Viewer platform as it continuously evolves and improves with new features and data driven learnings. Customers using Mappedin Viewer will always have the best version of our product, with out of the box features including:
 
 - An interactive 3D map
 - Location search and category listing
 - Turn by turn directions
-- A details page for each location including deals, photo gallery, external links, and related locations
-- A mobile first, app centric, responsive design
-- Deep linking support
   ... and more.
 
 ## Installation
 
-The Mappedin Web Plugin for WordPress can be obtained from the WordPress Plugin Store or downloaded directly from Github.
+The Mappedin Viewer Plugin for WordPress can be obtained from the WordPress Plugin Store or downloaded directly from Github.
 
-WordPress Store: Mappedin Plugin for WordPress
-Github: [Mappedin Plugin for WordPress](https://github.com/MappedIn/wordpress-plugins)
+WordPress Store: Mappedin Viewer Plugin for WordPress (coming soon!)
+Github: [Mappedin Viewer Plugin for WordPress](https://github.com/MappedIn/wordpress-plugins)
 Please refer to the [WordPress plugin installation documentation](https://wordpress.org/documentation/article/manage-plugins/#installing-plugins-1) and follow the steps for your preferred method of installation.
 
-## Venue Configuration
+## Map Configuration
 
-Mappedin users will need to provide their Client ID, Client Secret, and Venue Slug. Contact Mappedin if you have any questions regarding the information required for these settings.
+Mappedin users will need to provide their Map URL. Contact Mappedin if you have any questions regarding the information required for these settings.
+
+### How to get your Map URL
+1. Log into [Mappedin](https://app.mappedin.com/editor/)
+2. Click the green Preview button.
+3. Click Share.
+4. Enable sharing.
+5. Click the Copy Link button. The map URL is not copied to your clipboard.
+
+
+### How to configure the Mappedin Viewer Plugin
 
 1. Open your WordPress Admin Dashboard.
-2. Choose Mappedin Web from the left admin menu.
-3. Enter your Mappedin Client Id, Client Secret and Venue Slug.
-4. Enter the language code for the map's default language.
-5. Enter the width and height for the map in a CSS unit.
-6. Click Save.
+2. Choose Mappedin Viewer from the left admin menu.
+3. Paste your Map URL.
+4. Click Save.
 
-If you have not yet received your client id, secret and venue slug from Mappedin you can use a [trial key](https://developer.mappedin.com/api-keys/) with one of the following demo slugs.
+If you have not yet created a map, on of the following demo map IDs could be used:
 
-- mappedin-demo-mall
-- mappedin-demo-stadium
-- mappedin-demo-office
-- mappedin-demo-airport
+- Demo Mall: https://app.mappedin.com/map/65c0ff7430b94e3fabd5bb8c
+- Demo Office: https://app.mappedin.com/map/64ef49e662fd90fe020bee61
+- Demo School: https://app.mappedin.com/map/65c12d9b30b94e3fabd5bb91
 
-For more information about this plugin, visit the [Mappedin Web Plugin for WordPress page](https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress).
+For more information about this plugin, visit the [Mappedin Viewer Plugin for WordPress page](https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress).
 
 ## Frequently Asked Questions
 
 Is Mappedin free?
-The Mappedin plugin for WordPress is free and open source. Mappedin Web requires an annual subscription and is not free. Visit [www.mappedin.com](www.mappedin.com) for more information.
+The Mappedin plugin for WordPress is free and open source. Mappedin Viewer requires an annual subscription and is not free. Visit [www.mappedin.com](www.mappedin.com) for more information.
 
 Do I require a subscription to use this plugin?
-Yes, this plugin requires a map to created using [Mappedin CMS](https://www.mappedin.com/map-cms/) and a subscription to [Mappedin Web](https://developer.mappedin.com/pre-built-applications/responsive-web-app-guide). This plugin does not add maps to your WordPress pages without one.
+Yes, this plugin requires a map to created using [Mappedin](https://app.mappedin.com/). This plugin does not add maps to your WordPress pages without one.
 
 I don’t see my map! What do I do?
-Make sure you’ve configured the plugin correctly. Go to WordPress Admin Dashboard > Mappedin and add your Client ID, Client Secret, and Venue Slug.
+Make sure you’ve configured the plugin correctly. Go to WordPress Admin Dashboard > Mappedin Viewer and add your map URL.
 
 Where can I get additional support?
 Learn more about Mappedin products at [www.mappedin.com](www.mappedin.com). Contact Mappedin support with questions about configuring this plugin.
 
 What resources are loaded by this plugin?
-The plugin downloads a JavaScript and CSS file required by Mappedin Web. These are hosted by Mappedin and updated independently from this plugin.
+The plugin downloads a JavaScript and CSS file required by Mappedin Viewer. These are hosted by Mappedin and updated independently from this plugin.
 Mappedin Web JS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.js 
 Mappedin Web CSS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.css
 
@@ -77,11 +81,9 @@ Refer to the [Mappedin Privacy Policy](https://info.mappedin.com/privacy-policy)
 
 
 ## Screenshots
-
-![Mappedin Plugin For WordPress Admin Page](/assets/mapped_web_plugin_for_wordpress_configuration.png)
+![Mappedin Plugin For WordPress Admin Page](/assets/mapped_viewer_plugin_for_wordpress_configuration.png)
 
 ### Changelog
 
 1.0.0 - Initial release.
-1.0.3 - Updates for WordPress Marketplace Submission
 
