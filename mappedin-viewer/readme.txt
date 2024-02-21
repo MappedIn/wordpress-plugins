@@ -15,11 +15,12 @@ The Mappedin Viewer plugin for WordPress allows users to easily add interactive 
 
 The Mappedin Viewer Plugin for WordPress allows easily adding a Mappedin Viewer to any WordPress page or post.
 
-Mappedin Viewer is a fully packaged solution that can be easily embedded into your website. Once it's configured, you will have ongoing access to the Mappedin Viewer platform as it continuously evolves and improves with new features and data driven learnings. Customers using Mappedin Viewer will always have the best version of our product, with out of the box features including:
+Mappedin Viewer is a fully packaged solution that can be easily embedded into your website. Once it's configured, you will have ongoing access to Mappedin Viewer as it continuously evolves and improves with new features and data driven learnings. Customers using Mappedin Viewer will always have the best version of our product, with out of the box features including:
 
 - An interactive 3D map
-- Location search and category listing
+- Location search and point of interest listing
 - Turn by turn directions
+- Safety annotations
   ... and more.
 
 ## Installation
@@ -49,41 +50,35 @@ Mappedin users will need to provide their Map URL. Contact Mappedin if you have 
 3. Paste your Map URL.
 4. Click Save.
 
-If you have not yet created a map, on of the following demo map IDs could be used:
+If you have not yet created a map, one of the following demo map IDs could be used:
 
 - Demo Mall: https://app.mappedin.com/map/65c0ff7430b94e3fabd5bb8c
 - Demo Office: https://app.mappedin.com/map/64ef49e662fd90fe020bee61
 - Demo School: https://app.mappedin.com/map/65c12d9b30b94e3fabd5bb91
 
-For more information about this plugin, visit the [Mappedin Viewer Plugin for WordPress page](https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress).
+For more information about this plugin, visit the [Mappedin Viewer Plugin for WordPress page](https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/).
 
 ## Frequently Asked Questions
 
 Is Mappedin free?
-The Mappedin plugin for WordPress is free and open source. Mappedin Viewer requires an annual subscription and is not free. Visit [www.mappedin.com](www.mappedin.com) for more information.
-
-Do I require a subscription to use this plugin?
-Yes, this plugin requires a map to created using [Mappedin](https://app.mappedin.com/). This plugin does not add maps to your WordPress pages without one.
+The Mappedin Viewer Plugin for WordPress does not require a subscription and is free to use, however enhanced map functionality is available with a paid subscription. For more information refer to the [Mappedin Pricing Page](https://mappedin.com/pricing).
 
 I don’t see my map! What do I do?
 Make sure you’ve configured the plugin correctly. Go to WordPress Admin Dashboard > Mappedin Viewer and add your map URL.
 
 Where can I get additional support?
-Learn more about Mappedin products at [www.mappedin.com](www.mappedin.com). Contact Mappedin support with questions about configuring this plugin.
+Learn more about Mappedin products at [www.mappedin.com](https://www.mappedin.com). Contact Mappedin support with questions about configuring this plugin.
 
 What resources are loaded by this plugin?
 The plugin downloads a JavaScript and CSS file required by Mappedin Viewer. These are hosted by Mappedin and updated independently from this plugin.
-Mappedin Web JS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.js 
-Mappedin Web CSS File: https://d1p5cqqchvbqmy.cloudfront.net/web2/release/mappedin-web.css
+Mappedin Viewer JS File: https://cdn.jsdelivr.net/npm/@mappedin/viewer@latest/dist/index.js
 
 Where can I get more information about Mappedin's privacy policy and data collection?
 Refer to the [Mappedin Privacy Policy](https://info.mappedin.com/privacy-policy).
 
-
 ## Screenshots
-![Mappedin Plugin For WordPress Admin Page](/assets/mapped_viewer_plugin_for_wordpress_configuration.png)
+![Mappedin Plugin For WordPress Admin Page](/assets/mappedin_viewer_plugin_for_wordpress_configuration.png)
 
 ### Changelog
 
 1.0.0 - Initial release.
-

@@ -24,7 +24,7 @@
 *
 *
 * Plugin Name:          Mappedin-Viewer
-* Plugin URI:           https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
+* Plugin URI:           https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/
 * Description:          A Wordpress plugin to configure and display Mappedin Viewer.
 * Text Domain:          mappedin-viewer
 * Version:              1.0.0
@@ -165,7 +165,7 @@ function mappedin_display_viewer_config_page() {
                     </tr>
                 </table>
             </form>
-            <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Viewer Plugin for WordPress Guide</a> for more information on these parameters.</p>
+            <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/" target="_new">Mappedin Viewer Plugin for WordPress Guide</a> for more information on these parameters.</p>
             <p><b>' . $mappedin_viewer_save_status . ' </b></p>
         </div>';
 
@@ -261,7 +261,7 @@ function mappedin_viewer_display_shortcode_content() {
    // TODO - swap out documentation
     $ret_val = 
         '<p>Configure the Mappedin map URL in the Wordpress Mappedin Web admin page.</p>
-        <p>Refer to the <a href="https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
+        <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
         ';
 
     if (strlen($mappedin_viewer_url) > 0) {     
