@@ -56,10 +56,10 @@ For more information about this plugin, visit the [Mappedin Web Plugin for WordP
 ## Frequently Asked Questions
 
 Is Mappedin free?
-The Mappedin plugin for WordPress is free and open source. Mappedin Web requires an annual subscription and is not free. Visit [www.mappedin.com](www.mappedin.com) for more information.
+The Mappedin Web plugin for WordPress is free and open source. Mappedin Web requires an annual license and is not free. Visit [www.mappedin.com](https://www.mappedin.com) for more information.
 
-Do I require a subscription to use this plugin?
-Yes, this plugin requires a map to created using [Mappedin CMS](https://www.mappedin.com/map-cms/) and a subscription to [Mappedin Web](https://developer.mappedin.com/pre-built-applications/responsive-web-app-guide). This plugin does not add maps to your WordPress pages without one.
+Do I require a license to use this plugin?
+Yes, this plugin requires a map to created using [Mappedin CMS](https://www.mappedin.com/map-cms/) and a license to [Mappedin Web](https://developer.mappedin.com/pre-built-applications/responsive-web-app-guide). This plugin does not add maps to your WordPress pages without one.
 
 I don’t see my map! What do I do?
 Make sure you’ve configured the plugin correctly. Go to WordPress Admin Dashboard > Mappedin and add your Client ID, Client Secret, and Venue Slug.

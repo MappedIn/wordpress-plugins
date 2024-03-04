@@ -23,9 +23,9 @@
 * SOFTWARE.
 *
 *
-* Plugin Name:          Mappedin-Viewer
-* Plugin URI:           https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/
-* Description:          A Wordpress plugin to configure and display Mappedin Viewer.
+* Plugin Name:          Mappedin
+* Plugin URI:           https://developer.mappedin.com/web/v6/embed/mappedin-plugin-for-wordpress/
+* Description:          A Wordpress plugin to configure and display Mappedin.
 * Text Domain:          mappedin-viewer
 * Version:              1.0.0
 * Requires at least:    2.9.0
@@ -34,8 +34,6 @@
 * License:              MIT
 * License URI:          https://spdx.org/licenses/MIT.html
 */
-
-// TODO - update the above plugin URI
 
 // Exit if accessed directly - security.
 if ( ! defined( 'ABSPATH' ) ) exit; 
@@ -63,7 +61,7 @@ add_action( 'init', 'mappedin_viewer_register_shortcodes');
 
 // Shortcode registration.
 function mappedin_viewer_register_shortcodes() {
-    add_shortcode('mappedin-viewer', 'mappedin_viewer_display_shortcode_content');
+    add_shortcode('mappedin', 'mappedin_viewer_display_shortcode_content');
  }
 
 // Admin page CSS
@@ -143,10 +141,9 @@ function mappedin_display_viewer_config_page() {
     $the_admin_url = esc_url( admin_url( 'admin-post.php' ));
     $mappedin_url =  esc_html( get_option(MAPPEDIN_VIEWER_URL, "" ));
 
-    // TODO - replace link to the reference documentation at the bottom of this form
     $mappedin_viewer_config_html = 
         '<div class="wrap">            
-            <h2>Mappedin Viewer Configuration</h2>
+            <h2>Mappedin Configuration</h2>
             <form name="mappedinViewerOptions" method="post" action="' . $the_admin_url . '">
                 <input type="hidden" name="action" value="mappedin_viewer_form_response">
                 <input type="hidden" name="mappedin_viewer_admin_save_nonce" value="' . $mappedin_viewer_admin_save_nonce . '" />
@@ -165,7 +162,7 @@ function mappedin_display_viewer_config_page() {
                     </tr>
                 </table>
             </form>
-            <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/" target="_new">Mappedin Viewer Plugin for WordPress Guide</a> for more information on these parameters.</p>
+            <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-plugin-for-wordpress/" target="_new">Mappedin Plugin for WordPress Guide</a> for more information on these parameters.</p>
             <p><b>' . $mappedin_viewer_save_status . ' </b></p>
         </div>';
 
@@ -210,8 +207,8 @@ function mappedin_display_viewer_config_page() {
     $icon_data_uri = 'data:image/svg+xml;base64,' . $base64_svg_icon;
 
     add_menu_page(
-          'Mappedin Viewer Configuration',         // Page title
-          'Mappedin Viewer',                       // Menu title
+          'Mappedin Configuration',         // Page title
+          'Mappedin',                       // Menu title
           'manage_options',                        // Capability
           'mappedin-viewer-config',                // Menu slug
           'mappedin_display_viewer_config_page',   // Callback function
@@ -258,10 +255,9 @@ function mappedin_display_viewer_config_page() {
 function mappedin_viewer_display_shortcode_content() {
     $mappedin_viewer_url = esc_html ( get_option(MAPPEDIN_VIEWER_URL, "" ));
 
-   // TODO - swap out documentation
     $ret_val = 
         '<p>Configure the Mappedin map URL in the Wordpress Mappedin Web admin page.</p>
-        <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-viewer-plugin-for-wordpress/" target="_new">Mappedin Web Plugin for WordPress Guide</a> for more information on these parameters.</p>
+        <p>Refer to the <a href="https://developer.mappedin.com/web/v6/embed/mappedin-plugin-for-wordpress/" target="_new">Mappedin Plugin for WordPress Guide</a> for more information on these parameters.</p>
         ';
 
     if (strlen($mappedin_viewer_url) > 0) {     
