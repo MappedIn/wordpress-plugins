@@ -26,7 +26,7 @@
 * Plugin Name:          Mappedin
 * Plugin URI:           https://developer.mappedin.com/web/v6/embed/mappedin-plugin-for-wordpress/
 * Description:          A Wordpress plugin to configure and display Mappedin.
-* Text Domain:          mappedin-viewer
+* Text Domain:          mappedin
 * Version:              1.0.0
 * Requires at least:    2.9.0
 * Requires PHP:         7.2
