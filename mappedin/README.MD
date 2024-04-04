@@ -16,7 +16,7 @@ For more information about Mappedin, visit [www.mappedin.com](www.mappedin.com).
 
 ## Wordpress Environment
 
-- Tested up to: 6.4.2
+- Tested up to: 6.5.0
 - Requires at least: 3.6.0
 - PHP Version: 7.2+
 - Stable tag: 1.0.0
@@ -41,6 +41,14 @@ Mappedin users will need to provide their Map URL.
 3. Click Share.
 4. Enable sharing.
 5. Click the Copy Link button. The map URL is not copied to your clipboard.
+
+If you have not yet created a map, one of the following demo map URLs could be used:
+
+- Demo Mall: `https://app.mappedin.com/map/65c0ff7430b94e3fabd5bb8c`
+- Demo Office: `https://app.mappedin.com/map/64ef49e662fd90fe020bee61`
+- Demo School: `https://app.mappedin.com/map/65c12d9b30b94e3fabd5bb91`
+
+You can find more demo map URLs on the [Mappedin Demo Maps Page](https://developer.mappedin.com/web/v6/trial-keys-and-maps/).
 
 ### How to configure the Mappedin Plugin
 

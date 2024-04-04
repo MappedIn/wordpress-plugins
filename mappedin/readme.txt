@@ -3,7 +3,7 @@
 Contributors: mappedin
 Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 3.6.0
-Tested up to: 6.4.2
+Tested up to: 6.5.0
 Requires PHP: 7.2
 Stable tag: 1.0.0
 License: MIT
@@ -27,7 +27,7 @@ Mappedin maps can be easily embedded into your website. Once the plugin is confi
 
 The Mappedin Plugin for WordPress can be obtained from the WordPress Plugin Store or downloaded directly from Github.
 
-WordPress Store: Mappedin Plugin for WordPress (coming soon!)
+WordPress Store: Mappedin Plugin for WordPress
 Github: [Mappedin Plugin for WordPress](https://github.com/MappedIn/wordpress-plugins)
 Please refer to the [WordPress plugin installation documentation](https://wordpress.org/documentation/article/manage-plugins/#installing-plugins-1) and follow the steps for your preferred method of installation.
 
@@ -50,11 +50,13 @@ Mappedin users will need to provide their Map URL. Contact Mappedin if you have 
 3. Paste your Map URL.
 4. Click Save.
 
-If you have not yet created a map, one of the following demo map IDs could be used:
+If you have not yet created a map, one of the following demo map URLs could be used:
 
 - Demo Mall: https://app.mappedin.com/map/65c0ff7430b94e3fabd5bb8c
 - Demo Office: https://app.mappedin.com/map/64ef49e662fd90fe020bee61
 - Demo School: https://app.mappedin.com/map/65c12d9b30b94e3fabd5bb91
+
+You can find more demo map URLs on the [Mappedin Demo Maps Page](https://developer.mappedin.com/web/v6/trial-keys-and-maps/).
 
 For more information about this plugin, visit the [Mappedin Plugin for WordPress page](https://developer.mappedin.com/web/v6/embed/mappedin-plugin-for-wordpress/).
 

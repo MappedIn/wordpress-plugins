@@ -27,7 +27,7 @@
 * Plugin URI:           https://developer.mappedin.com/pre-built-applications/mappedin_web_plugin_for_wordpress
 * Description:          A Wordpress plugin to configure and display Mappedin Web.
 * Text Domain:          mappedin-web
-* Version:              1.0.3
+* Version:              1.0.4
 * Requires at least:    2.9.0
 * Requires PHP:         7.2
 * Author:               Mappedin
