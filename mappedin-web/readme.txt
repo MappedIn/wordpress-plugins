@@ -3,7 +3,7 @@
 Contributors: mappedin
 Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 2.9.0
-Tested up to: 6.5.0
+Tested up to: 6.7.1
 Requires PHP: 7.2
 Stable tag: 1.0.4
 License: MIT
