@@ -14,7 +14,7 @@ For more information about Mappedin, visit [www.mappedin.com](www.mappedin.com).
 
 ## Wordpress Environment
 
-- Tested up to: 6.5.0
+- Tested up to: 6.7.1
 - Requires at least: 2.9.0
 - PHP Version: 7.2+
 - Stable tag: 1.0.4
