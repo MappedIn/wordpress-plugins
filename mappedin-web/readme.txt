@@ -5,7 +5,7 @@ Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 2.9.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: MIT
 License URI: https://opensource.org/license/mit/
 
