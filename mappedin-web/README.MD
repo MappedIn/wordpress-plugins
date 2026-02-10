@@ -14,10 +14,10 @@ For more information about Mappedin, visit [www.mappedin.com](www.mappedin.com).
 
 ## Wordpress Environment
 
-- Tested up to: 6.8
+- Tested up to: 6.9.1
 - Requires at least: 2.9.0
 - PHP Version: 7.2+
-- Stable tag: 1.0.5
+- Stable tag: 1.0.7
 
 License: MIT
 License URI: https://opensource.org/license/mit/
@@ -45,3 +45,12 @@ Refer to the [Mappedin Web Plugin for WordPress Guide](https://developer.mappedi
 
 1. Add a new shortcode block to the page.
 2. Enter `[mappedin-web]` as the shortcode.
+
+### Changelog
+
+1.0.0 - Initial release.
+1.0.3 - Updates for WordPress Marketplace Submission
+1.0.4 - Noted support for WordPress 6.5.0
+1.0.5 - Noted support for WordPress 6.8.0
+1.0.6 - Noted support for WordPress 6.9.1
+1.0.7 - Version bump
