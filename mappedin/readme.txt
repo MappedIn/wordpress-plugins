@@ -3,9 +3,9 @@
 Contributors: mappedin
 Tags: map, maps, interactive map, web map, mappedin
 Requires at least: 3.6.0
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.5
 License: MIT
 License URI: https://opensource.org/license/mit/
 
@@ -84,3 +84,8 @@ Refer to the [Mappedin Privacy Policy](https://info.mappedin.com/privacy-policy)
 ### Changelog
 
 1.0.0 - Initial release.
+1.0.1 - Noted support for WordPress 6.8.0
+1.0.2 - Noted support for WordPress 6.9.1
+1.0.3 - Version bump
+1.0.4 - Noted support for WordPress 7.0.
+1.0.5 - Noted support for WordPress 7.1.

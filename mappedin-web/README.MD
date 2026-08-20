@@ -14,10 +14,10 @@ For more information about Mappedin, visit [www.mappedin.com](www.mappedin.com).
 
 ## Wordpress Environment
 
-- Tested up to: 6.9.1
+- Tested up to: 7.1
 - Requires at least: 2.9.0
 - PHP Version: 7.2+
-- Stable tag: 1.0.7
+- Stable tag: 1.0.9
 
 License: MIT
 License URI: https://opensource.org/license/mit/
@@ -54,3 +54,5 @@ Refer to the [Mappedin Web Plugin for WordPress Guide](https://developer.mappedi
 1.0.5 - Noted support for WordPress 6.8.0
 1.0.6 - Noted support for WordPress 6.9.1
 1.0.7 - Version bump
+1.0.8 - Noted support for WordPress 7.0
+1.0.9 - Noted support for WordPress 7.1
